@@ -1,0 +1,4 @@
+module TokamakGTKCHelpers {
+    umbrella "/Users/dodocha/workspace/EquipmentDatabase/.build/checkouts/Tokamak/Sources/TokamakGTKCHelpers/include"
+    export *
+}
