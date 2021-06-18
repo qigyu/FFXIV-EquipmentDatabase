@@ -64,6 +64,7 @@ let headerLogoStyle = TailwindStyle(
 )
 
 let rootViewStyle = TailwindStyle(
+    layout: .init(overflow: .auto),
     flexbox: .init(direction: .col),
     boxAlignment: .init(
         justifyContent: .start,
@@ -90,7 +91,94 @@ struct ContentView: View {
             spacing: .init(margin: [.left(56),.top(-60)]),
             background: .init(backgroundColor: .pink(.n100)))
     }
+    var style1: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .full, height: . n(52)),
+            spacing: .init(margin: [.top(52)]),
+            background: .init(backgroundColor: .green(.n200)))
+    }
+    var style2: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .full, height: .n(96)),
+            spacing: .init(),
+            background: .init(backgroundColor: .green(.n300)))
+        
+    }
+    var equipmentStyle: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
+            sizing: .init(width: .n(80), height: .n(80)),
+            spacing: .init(margin: [.left(32)]),
+            background: .init(backgroundColor: .gray(.n500)))
+        
+    }
+    var equipmentStyle2: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
+            sizing: .init(width: .n(80), height: .n(80)),
+            spacing: .init(margin: [.left(96)]),
+            background: .init(backgroundColor: .gray(.n700)))
+        
+    }
+    var style3: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .full, height: .n(52)),
+            spacing: .init(),
+            background: .init(backgroundColor: .green(.n700)))
+    }
     
+    var style4: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .full, height: .n(52)),
+            spacing: .init(),
+            background: .init(backgroundColor: .green(.n700)))
+    }
     var style: TailwindStyle {
         TailwindStyle.init(
             flexbox: .init(
@@ -120,45 +208,21 @@ struct ContentView: View {
             spacing: .init())
         
     }
-    var equipmentStyle: TailwindStyle {
-        TailwindStyle.init(
-            layout: .init(
-            container: .container,
-            boxDecorationBreak: nil,
-            boxSizing: .content,
-            display: .flex,
-            floats: .left,
-                clear: nil,
-                isolation: nil,
-                objectFit: nil,
-                objectPosition: nil,
-                overflow: nil,
-                overscrollbehavior: nil,
-                position: nil,
-                visibility: nil,
-                zIndex: nil,
-                layoutPosition: nil),
-            flexbox: .init(
-                direction: .row,
-                wrap: nil,
-                grow: nil,
-                shrink: nil,
-                flex: .enable,
-                order: nil),
-                grid: .init(),
-                boxAlignment: .init(),
-                sizing: .init(width: .n(60), height: .n(60)),
-                spacing: .init(margin: [.left(0),.top(0)]),
-                typography: .init(),
-                background: .init(backgroundColor: .gray(.n100)))
-    }
     public var body: some View {
         html("div", attributes: ["class" :
                                     closs(style)]) {
-            html("div", attributes: [:], content: "なんもしたくない プロフィールとかかきたい")
+            html("div", attributes: [:], content: "あばばばば")
             html("div", attributes: ["class" :
-                                        closs(contentStyle)]) {}
-                                        html("div", attributes: ["class":closs(equipmentStyle)])
+                                        closs(contentStyle)]) {
+                html("div", attributes: ["class" : closs(style1)])
+                html("div", attributes: ["class" : closs(style2)]){
+                    html("div", attributes: ["class" : closs(equipmentStyle)])
+                    {
+                        html("div", attributes: ["class" : closs(equipmentStyle2)])
+                    } }
+                html("div", attributes: ["class" : closs(style3)], content: "ふったー")
+            }
+                                        //    html("div", attributes: ["class":closs(equipmentStyle)])
         }
     }
     
@@ -175,7 +239,7 @@ public struct HelloView: View {
     
     
     public var body: some View {
-        html("div", attributes: ["class" :closs(rootViewStyle, "overflow-auto", "h-screen")]) {
+        html("div", attributes: ["class" :closs(rootViewStyle)]) {
             HeaderView()
             ContentView()
             
