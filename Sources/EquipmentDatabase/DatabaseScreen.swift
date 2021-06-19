@@ -22,7 +22,7 @@ extension TailwindStyle: ClosswiftCombinable {
 
 struct HeaderView: View {
     
-    @State var color: Tailwind.BackgroundColor = .blue(.n200)
+    @State var color: Tailwind.BackgroundColor = .white
     
     var style: TailwindStyle {
         TailwindStyle.init(
@@ -89,7 +89,7 @@ struct ContentView: View {
             boxAlignment: .init(justifyContent: nil, justifyItems: nil, justifySelf: nil, alignContent: nil, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .screen, height: .full),
             spacing: .init(margin: [.left(56),.top(-60)]),
-            background: .init(backgroundColor: .pink(.n100)))
+            background: .init(backgroundColor: .black))
     }
     var style1: TailwindStyle {
         TailwindStyle.init(
@@ -130,7 +130,7 @@ struct ContentView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
-            sizing: .init(width: .n(80), height: .n(80)),
+            sizing: .init(width: .n(80), height: .n(96)),
             spacing: .init(margin: [.left(32)]),
             background: .init(backgroundColor: .gray(.n500)))
         
@@ -145,7 +145,7 @@ struct ContentView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
-            sizing: .init(width: .n(80), height: .n(80)),
+            sizing: .init(width: .n(80), height: .n(96)),
             spacing: .init(margin: [.left(96)]),
             background: .init(backgroundColor: .gray(.n700)))
         
@@ -162,7 +162,7 @@ struct ContentView: View {
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .full, height: .n(52)),
             spacing: .init(),
-            background: .init(backgroundColor: .green(.n700)))
+            background: .init(backgroundColor: .red(.n900)))
     }
     
     var style4: TailwindStyle {
@@ -191,7 +191,7 @@ struct ContentView: View {
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .n(56), height: .full),
             spacing: .init(),
-            background: .init(backgroundColor: .indigo(.n500)))
+            background: .init(backgroundColor: .transparent))
     }
     
     var imageStyle: TailwindStyle {
