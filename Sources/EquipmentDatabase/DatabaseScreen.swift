@@ -167,6 +167,7 @@ struct ContentView: View {
     
     var equipmentImageStyle: TailwindStyle {
         TailwindStyle.init(
+            layout: .init(container: .container, boxDecorationBreak: nil, boxSizing: nil, display: nil, floats: nil, clear: nil, isolation: nil, objectFit: nil, objectPosition: .leftTop, overflow: .auto, overscrollbehavior: nil, position: nil, visibility: nil, zIndex: nil, layoutPosition: nil),
             flexbox: .init(
                 direction: .row,
                 wrap: nil,
@@ -175,9 +176,43 @@ struct ContentView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
-            sizing: .init(width: .n(4), height: .n(4)),
+            sizing: .init(width: .n(24), height: .n(24)),
             spacing: .init(),
             background: .init(backgroundColor: .green(.n700)))
+    }
+    
+    var equipmentImageStyle2: TailwindStyle {
+        TailwindStyle.init(
+            layout: .init(container: .container, boxDecorationBreak: nil, boxSizing: nil, display: nil, floats: nil, clear: nil, isolation: nil, objectFit: nil, objectPosition: .leftTop, overflow: .auto, overscrollbehavior: nil, position: nil, visibility: nil, zIndex: nil, layoutPosition: nil),
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .n(24), height: .n(24)),
+            spacing: .init( margin: [.top(-24)]),
+            background: .init(backgroundColor: .green(.n700)))
+    }
+    
+    var equipmentNameStyle: TailwindStyle {
+        TailwindStyle.init(
+            layout: .init(),
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: nil,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            grid: .init(),
+            boxAlignment: .init(),
+            sizing: .init(width: .n(56),height: .n(24)),
+            spacing: .init(margin: [.top(-24),.left(24)]),
+            typography: .init(),
+            background: .init(backgroundColor: .blue(.n50)))
     }
     var style: TailwindStyle {
         TailwindStyle.init(
@@ -218,11 +253,22 @@ struct ContentView: View {
                 html("div", attributes: ["class" : closs(style2)]){
                     html("div", attributes: ["class" : closs(equipmentStyle)])
                     {
-                        html("div", attributes: ["class" : closs(equipmentStyle2)])
+                        html("img", attributes: [ "src":"https://res.cloudinary.com/pando-life/image/upload/f_auto,b_rgb:E9E9E9,c_limit,q_auto:good/article/contents/gpbwy8486yrpfdl31591479103.jpg","class" : closs(equipmentImageStyle)])
+                        html("div", attributes: ["class" :
+                                                    closs(equipmentNameStyle, "font-sans","text-xl","pt-11")], content: "とろ〜り3種のチーズ牛丼")
+                        html("div", attributes: ["class" : closs(equipmentStyle2)]){
+                            html("div", attributes: ["class" : closs(equipmentImageStyle2)])
+                            html("img",
+                                 attributes: [
+                                    "src":"https://res.cloudinary.com/pando-life/image/upload/f_auto,b_rgb:E9E9E9,c_limit,q_auto:good/article/contents/gpbwy8486yrpfdl31591479103.jpg",
+                                    "class": closs(equipmentImageStyle2)
+                                 ])
+                            html("div", attributes: ["class" :
+                                                        closs(equipmentNameStyle, "font-sans","text-xl","pt-11")], content: "高菜明太マヨ牛丼")
+                        }
                     } }
                 html("div", attributes: ["class" : closs(style3)], content: "ふったー")
             }
-                                        //    html("div", attributes: ["class":closs(equipmentStyle)])
         }
     }
     
