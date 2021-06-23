@@ -34,7 +34,7 @@ struct HeaderView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .auto, alignContent: .center, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
-            sizing: .init(width: .max, height: .n(40)),
+            sizing: .init(width: .max, height: .n(36)),
             spacing: .init(),
             background: .init(backgroundColor: color))
     }
@@ -146,7 +146,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
             sizing: .init(width: .n(80), height: .n(96)),
-            spacing: .init(margin: [.left(96)]),
+            spacing: .init(margin: [.left(96), .top(-96)]),
             background: .init(backgroundColor: .gray(.n700)))
         
     }
@@ -211,8 +211,58 @@ struct ContentView: View {
             boxAlignment: .init(),
             sizing: .init(width: .n(56),height: .n(24)),
             spacing: .init(margin: [.top(-24),.left(24)]),
-            typography: .init(),
+            typography: .init(
+                fontFamily: .sans,
+                fontSize: .xl,
+                fontStyle: nil,
+                fontSmoothing: .antialiased,
+                fontWeight: .semibold,
+                fontVariantNumeric: .tabularNums,
+                textAlign: .center,
+                textColor: .black,
+                textDecoration: nil,
+                textOpacity: nil,
+                textOverflow: nil,
+                textTransform: nil,
+                verticalAlign: .bottom,
+                whitespace: nil,
+                wordBreak: nil,
+                letterSpacing: .normal,
+                lineHeight: .snug,
+                listStyleType: Tailwind.ListStyleType.none,
+                listStylePosition: .inside,
+                placeholderColor: nil,
+                placeholderOpacity: nil),
             background: .init(backgroundColor: .blue(.n50)))
+    }
+    
+    var equipmentParameterStyle: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: .enable,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .n(80), height: .n(44)),
+            spacing: .init(margin: []),
+            background: .init(backgroundColor: .gray(.n700)))
+    }
+    var style4: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .row,
+                wrap: nil,
+                grow: .enable,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .n(80), height: .n(28)),
+            spacing: .init(margin: []),
+            background: .init(backgroundColor: .gray(.n700)))
     }
     var style: TailwindStyle {
         TailwindStyle.init(
@@ -245,7 +295,7 @@ struct ContentView: View {
     }
     public var body: some View {
         html("div", attributes: ["class" :
-                                    closs(style)]) {
+                                    closs(style)]){
             html("div", attributes: [:], content: "あばばばば")
             html("div", attributes: ["class" :
                                         closs(contentStyle)]) {
@@ -255,7 +305,9 @@ struct ContentView: View {
                     {
                         html("img", attributes: [ "src":"https://res.cloudinary.com/pando-life/image/upload/f_auto,b_rgb:E9E9E9,c_limit,q_auto:good/article/contents/gpbwy8486yrpfdl31591479103.jpg","class" : closs(equipmentImageStyle)])
                         html("div", attributes: ["class" :
-                                                    closs(equipmentNameStyle, "font-sans","text-xl","pt-11")], content: "とろ〜り3種のチーズ牛丼")
+                                                    closs(equipmentNameStyle)], content: "とろ〜り3種のチーズ牛丼")
+                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white")],content:"パラメータならべるところ")
+                        html("div", attributes: ["class" : closs(style4)])
                         html("div", attributes: ["class" : closs(equipmentStyle2)]){
                             html("div", attributes: ["class" : closs(equipmentImageStyle2)])
                             html("img",
@@ -264,18 +316,23 @@ struct ContentView: View {
                                     "class": closs(equipmentImageStyle2)
                                  ])
                             html("div", attributes: ["class" :
-                                                        closs(equipmentNameStyle, "font-sans","text-xl","pt-11")], content: "高菜明太マヨ牛丼")
+                                                        closs(equipmentNameStyle)], content: "高菜明太マヨ牛丼")
+                            html("div", attributes: ["class" : closs(equipmentParameterStyle)])
+                            html("div", attributes: ["class" : closs(style4)])
                         }
-                    } }
+                    }
+                    
+                }
+                
                 html("div", attributes: ["class" : closs(style3)], content: "ふったー")
             }
         }
     }
-    
-    
-    
-    
 }
+
+    
+    
+
 public struct HelloView: View {
     
     public var outlineStyle = TailwindStyle(
