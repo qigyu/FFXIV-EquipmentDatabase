@@ -34,7 +34,7 @@ struct HeaderView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .auto, alignContent: .center, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
-            sizing: .init(width: .max, height: .n(36)),
+            sizing: .init(width: .max, height: .n(40)),
             spacing: .init(),
             background: .init(backgroundColor: color))
     }
@@ -131,7 +131,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .center, justifyItems: .center, justifySelf: .center, alignContent: .center, alignItems: .center, alignSelf: .center, placeContent: .center, placeItems: .center, placeSelf: .center),
             sizing: .init(width: .n(80), height: .n(96)),
-            spacing: .init(margin: [.left(32)]),
+            spacing: .init(margin: [.left(32),.top(-4)]),
             background: .init(backgroundColor: .gray(.n700)))
         
     }
@@ -177,7 +177,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .n(24), height: .n(24)),
-            spacing: .init(),
+            spacing: .init(margin: []),
             background: .init(backgroundColor: .green(.n700)))
     }
     
@@ -193,7 +193,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .n(24), height: .n(24)),
-            spacing: .init( margin: [.top(-24)]),
+            spacing: .init( margin: [.top(-48)]),
             background: .init(backgroundColor: .green(.n700)))
     }
     
@@ -303,22 +303,30 @@ struct ContentView: View {
                 html("div", attributes: ["class" : closs(style2)]){
                     html("div", attributes: ["class" : closs(equipmentStyle)])
                     {
-                        html("img", attributes: [ "src":"https://res.cloudinary.com/pando-life/image/upload/f_auto,b_rgb:E9E9E9,c_limit,q_auto:good/article/contents/gpbwy8486yrpfdl31591479103.jpg","class" : closs(equipmentImageStyle)])
+                        html("img", attributes: [ "src":"https://rio-ff14.com/database/wp-content/uploads/2020/12/2035a635611447d2fd8550d0101d58e3.jpg","class" : closs(equipmentImageStyle)])
                         html("div", attributes: ["class" :
-                                                    closs(equipmentNameStyle)], content: "とろ〜り3種のチーズ牛丼")
-                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white")],content:"パラメータならべるところ")
+                                                    closs(equipmentNameStyle)], content: "エデンモーン・ディフェンダーコート")
+                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"Parameter")
+                        html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・STR +671")
+                        html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・VIT +771")
+                        html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・CRIT +489")
+                        html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・DET +342")
                         html("div", attributes: ["class" : closs(style4)])
                         html("div", attributes: ["class" : closs(equipmentStyle2)]){
                             html("div", attributes: ["class" : closs(equipmentImageStyle2)])
                             html("img",
                                  attributes: [
-                                    "src":"https://res.cloudinary.com/pando-life/image/upload/f_auto,b_rgb:E9E9E9,c_limit,q_auto:good/article/contents/gpbwy8486yrpfdl31591479103.jpg",
+                                    "src":"https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/b9/b9c2950330ccd6e8ba228fc567c86e4f5186fc39.png?n5.55",
                                     "class": closs(equipmentImageStyle2)
                                  ])
                             html("div", attributes: ["class" :
-                                                        closs(equipmentNameStyle)], content: "高菜明太マヨ牛丼")
-                            html("div", attributes: ["class" : closs(equipmentParameterStyle)])
-                            html("div", attributes: ["class" : closs(style4)])
+                                                        closs(equipmentNameStyle)], content: "クリプトラーカー・ディフェンダーキュイラスRE")
+                            html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"Parameter")
+                            html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・STR +671")
+                            html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・VIT +771")
+                            html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・DET +342")
+                            html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・TEN +489")
+                                html("div", attributes: ["class" : closs(style4)])
                         }
                     }
                     
