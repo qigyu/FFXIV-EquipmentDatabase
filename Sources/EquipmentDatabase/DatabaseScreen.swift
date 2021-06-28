@@ -193,7 +193,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .n(24), height: .n(24)),
-            spacing: .init( margin: [.top(-48)]),
+            spacing: .init( margin: [.top(-56)]),
             background: .init(backgroundColor: .green(.n700)))
     }
     
@@ -264,6 +264,20 @@ struct ContentView: View {
             spacing: .init(margin: []),
             background: .init(backgroundColor: .gray(.n700)))
     }
+    var style5: TailwindStyle {
+        TailwindStyle.init(
+            flexbox: .init(
+                direction: .col,
+                wrap: nil,
+                grow: .enable,
+                shrink: nil,
+                flex: .auto,
+                order: nil),
+            boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
+            sizing: .init(width: .n(56), height: .n(48)),
+            spacing: .init(padding: [.top(96)],margin: [.top(96)]),
+            background: .init(backgroundColor: .gray(.n700)))
+    }
     var style: TailwindStyle {
         TailwindStyle.init(
             flexbox: .init(
@@ -297,6 +311,7 @@ struct ContentView: View {
         html("div", attributes: ["class" :
                                     closs(style)]){
             html("div", attributes: [:], content: "あばばばば")
+
             html("div", attributes: ["class" :
                                         closs(contentStyle)]) {
                 html("div", attributes: ["class" : closs(style1)])
@@ -306,7 +321,8 @@ struct ContentView: View {
                         html("img", attributes: [ "src":"https://rio-ff14.com/database/wp-content/uploads/2020/12/2035a635611447d2fd8550d0101d58e3.jpg","class" : closs(equipmentImageStyle)])
                         html("div", attributes: ["class" :
                                                     closs(equipmentNameStyle)], content: "エデンモーン・ディフェンダーコート")
-                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"Parameter")
+                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"ITEM LEVEL:530")
+                        html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center","-mt-36")],content:"PARAMETER")
                         html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・STR +671")
                         html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・VIT +771")
                         html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・CRIT +489")
@@ -321,7 +337,8 @@ struct ContentView: View {
                                  ])
                             html("div", attributes: ["class" :
                                                         closs(equipmentNameStyle)], content: "クリプトラーカー・ディフェンダーキュイラスRE")
-                            html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"Parameter")
+                            html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center")],content:"ITEM LEVEL:530")
+                            html("div", attributes: ["class" : closs(equipmentParameterStyle,"text-white","text-xl","font-semibold","text-center","-mt-36")],content:"PARAMETER")
                             html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・STR +671")
                             html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-44","text-right","pr-8")],content:"・VIT +771")
                             html("div",attributes: ["class" : closs(equipmentParameterStyle,"text-white","-mt-32","pl-8")],content:"・DET +342")
