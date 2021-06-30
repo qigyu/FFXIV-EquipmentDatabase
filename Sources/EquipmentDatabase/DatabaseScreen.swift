@@ -102,7 +102,7 @@ struct ContentView: View {
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .full, height: . n(52)),
-            spacing: .init(margin: [.top(52)]),
+            spacing: .init(margin: [.top(4)]),
             background: .init(backgroundColor: .yellow(.n900)))
     }
     var style2: TailwindStyle {
@@ -269,13 +269,13 @@ struct ContentView: View {
             flexbox: .init(
                 direction: .col,
                 wrap: nil,
-                grow: .enable,
+                grow: nil,
                 shrink: nil,
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
             sizing: .init(width: .n(56), height: .n(48)),
-            spacing: .init(padding: [.top(96)],margin: [.top(96)]),
+            spacing: .init(padding: [],margin: []),
             background: .init(backgroundColor: .gray(.n700)))
     }
     var style: TailwindStyle {
@@ -311,7 +311,7 @@ struct ContentView: View {
         html("div", attributes: ["class" :
                                     closs(style)]){
             html("div", attributes: [:], content: "あばばばば")
-
+            html("div", attributes: ["class" : closs(style5,"pt-20")],content: "ここをクリック！")
             html("div", attributes: ["class" :
                                         closs(contentStyle)]) {
                 html("div", attributes: ["class" : closs(style1)])
