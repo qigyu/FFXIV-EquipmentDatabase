@@ -274,8 +274,30 @@ struct ContentView: View {
                 flex: .auto,
                 order: nil),
             boxAlignment: .init(justifyContent: .start, justifyItems: .start, justifySelf: nil, alignContent: .start, alignItems: nil, alignSelf: nil, placeContent: nil, placeItems: nil, placeSelf: nil),
-            sizing: .init(width: .n(56), height: .n(48)),
+            sizing: .init(width: .n(56), height: .n(24)),
             spacing: .init(padding: [],margin: []),
+            typography: .init(
+                fontFamily: nil,
+                fontSize: nil,
+                fontStyle: nil,
+                fontSmoothing: .antialiased,
+                fontWeight: .medium,
+                fontVariantNumeric: .tabularNums,
+                textAlign: nil,
+                textColor: .white,
+                textDecoration: .underline,
+                textOpacity: nil,
+                textOverflow: nil,
+                textTransform: nil,
+                verticalAlign: nil,
+                whitespace: nil,
+                wordBreak: nil,
+                letterSpacing: nil,
+                lineHeight: nil,
+                listStyleType: nil,
+                listStylePosition: nil,
+                placeholderColor: nil,
+                placeholderOpacity: nil),
             background: .init(backgroundColor: .gray(.n700)))
     }
     var style: TailwindStyle {
@@ -311,7 +333,7 @@ struct ContentView: View {
         html("div", attributes: ["class" :
                                     closs(style)]){
             html("div", attributes: [:], content: "あばばばば")
-            html("div", attributes: ["class" : closs(style5,"pt-20")],content: "ここをクリック！")
+            html("div", attributes: ["class" : closs(style5)],content: "ここをクリック！")
             html("div", attributes: ["class" :
                                         closs(contentStyle)]) {
                 html("div", attributes: ["class" : closs(style1)])
