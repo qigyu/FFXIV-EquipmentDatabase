@@ -333,7 +333,6 @@ struct ContentView: View {
         html("div", attributes: ["class" :
                                     closs(style)]){
             html("div", attributes: [:], content: "あばばばば")
-            html("div", attributes: ["class" : closs(style5)],content: "ここをクリック！")
             html("div", attributes: ["class" :
                                         closs(contentStyle)]) {
                 html("div", attributes: ["class" : closs(style1)])
